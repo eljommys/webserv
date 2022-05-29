@@ -236,7 +236,9 @@ void  Server::_getResponse(ConnectionData & conn) const
   }
   else
     fileName = serv->not_found_page;
-  conn.dataOut = Response(fileName).get();
+
+  //Second argument must be the pwd
+  conn.dataOut = Response(fileName, ).get();
   return ;
 }
 
@@ -584,6 +586,6 @@ bool  Server::start(void)
         break ;
     }
     this->_monitor.purge();
-  } 
+  }
   return (true);
 }

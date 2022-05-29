@@ -8,14 +8,14 @@
 
 struct LocationConfig
 {
-	std::string						uri;
-	std::string						root;
+	std::string				uri;
+	std::string				root;
 	std::set<std::string>	methods;
-	std::string						redirection;
-	bool									dir_list;
-	std::string						default_file;
-	std::string						upload_dir;
-	std::string						cgi_dir;
+	std::string				redirection;
+	bool					dir_list;
+	std::string				default_file;
+	std::string				upload_dir;
+	std::string				cgi_dir;
 
 	LocationConfig(void);
 
@@ -33,10 +33,10 @@ private:
 
 struct	ServerConfig
 {
-	std::size_t										port; // max. port number 65535
-	std::set<std::string>					server_name; // host
-	std::string										not_found_page;
-	std::size_t										max_body_size;
+	std::size_t						port; // max. port number 65535
+	std::set<std::string>			server_name; // host
+	std::string						not_found_page;
+	std::size_t						max_body_size;
 	//Dynamic array to store different location configs
 	std::vector< LocationConfig >	location;
 
@@ -97,7 +97,7 @@ private:
 	bool  _processDigits(std::string const & token, std::size_t & pos,
 												std::stack< std::pair<char, std::string> > & state);
 	bool	_validateSyntax(std::vector<std::string> const & tokens);
-	
+
 	void	_tokenizeFile(std::vector<std::string> & tokens);
 
 public:

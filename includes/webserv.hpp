@@ -8,6 +8,8 @@
 #include <unistd.h>
 #include <fcntl.h>
 #include <signal.h>
+#include <sys/stat.h>
+#include <filesystem>
 
 //Server
 #include "Config.hpp"
